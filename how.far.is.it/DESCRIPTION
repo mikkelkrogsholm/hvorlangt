@@ -1,0 +1,31 @@
+Package: how.far.is.it
+Title: Get distances to POIs
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Mikkel",
+           family = "Krogsholm",
+           role = c("aut", "cre"),
+           email = "mikkel@56n.dk")
+Description: This package helps you get a tibble of
+    distance from a given address to a range of POIs - points of interest.
+    It also helps you turn these into features you can you for
+    modelling.
+License: file LICENSE
+Imports: 
+    dplyr,
+    glue,
+    jsonlite,
+    magrittr,
+    purrr,
+    stringr,
+    tibble,
+    tidyr,
+    utils
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: 
+    knitr
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1

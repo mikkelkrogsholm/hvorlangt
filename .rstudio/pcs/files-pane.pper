@@ -1,0 +1,9 @@
+{
+    "path" : "~/how.far.is.it",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}

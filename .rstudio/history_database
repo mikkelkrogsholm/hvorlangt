@@ -1,0 +1,524 @@
+1563981273504:base_url <- "https://hvorlangterder.poi.viamap.net/v1/nearestpoi/?"
+1563981273530:token <- "token=eyJkcGZ4IjogImh2b3JsYW5ndGVyZGVyIiwgInByaXZzIjogInIxWjByMEYwazZCdFdxUWNPVXlrQi95NlNVcEp2MlFiZ3lYZXRxNEhZNFhPLzNZclcwK0s5dz09In0.fP4JWis69HmaSg5jVHiK8nemiCu6VaMULSGGJyK4D4PkWq4iA1+nSHWMaHxepKwJ83sEiy9nMNZhv7BcktRNrA"
+1563981273549:address <- "fromaddress=Amager%20Boulevard%20126,%202300%20K%C3%B8benhavn%20S"
+1563981273572:type <- "poitypes=daycare"
+1563981273592:dist <- "mot=foot"
+1563981287868:library(tidyverse)
+1563981381493:url <- str_c(base_url, "?", token) %>% str_c(., address, type, dist, collapse = "&")
+1563981383915:url
+1563981389555:base_url <- "https://hvorlangterder.poi.viamap.net/v1/nearestpoi/"
+1563981389761:token <- "token=eyJkcGZ4IjogImh2b3JsYW5ndGVyZGVyIiwgInByaXZzIjogInIxWjByMEYwazZCdFdxUWNPVXlrQi95NlNVcEp2MlFiZ3lYZXRxNEhZNFhPLzNZclcwK0s5dz09In0.fP4JWis69HmaSg5jVHiK8nemiCu6VaMULSGGJyK4D4PkWq4iA1+nSHWMaHxepKwJ83sEiy9nMNZhv7BcktRNrA"
+1563981389941:address <- "fromaddress=Amager%20Boulevard%20126,%202300%20K%C3%B8benhavn%20S"
+1563981390120:type <- "poitypes=daycare"
+1563981390270:dist <- "mot=foot"
+1563981391595:url <- str_c(base_url, "?", token) %>% str_c(., address, type, dist, collapse = "&")
+1563981393435:url
+1563981515344:url <- "https://hvorlangterder.poi.viamap.net/v1/nearestpoi/?poitypes=daycare&fromaddress=Amager%20Boulevard%20124,%202300%20K%C3%B8benhavn%20S&mot=foot&token=eyJkcGZ4IjogImh2b3JsYW5ndGVyZGVyIiwgInByaXZzIjogInIxWjByMEYwazZCdFdxUWNPVXlrQi95NlNVcEp2MlFiZ3lYZXRxNEhZNFhPLzNZclcwK0s5dz09In0.fP4JWis69HmaSg5jVHiK8nemiCu6VaMULSGGJyK4D4PkWq4iA1+nSHWMaHxepKwJ83sEiy9nMNZhv7BcktRNrA"
+1563981527064:jsonlite::fromJSON(url)
+1563981608914:address <- "Amager%20Boulevard%20124,%202300%20K%C3%B8benhavn%20S"
+1563981610059:url <- glue::glue("https://hvorlangterder.poi.viamap.net/v1/nearestpoi/?poitypes=daycare&fromaddress={address}&mot=foot&token=eyJkcGZ4IjogImh2b3JsYW5ndGVyZGVyIiwgInByaXZzIjogInIxWjByMEYwazZCdFdxUWNPVXlrQi95NlNVcEp2MlFiZ3lYZXRxNEhZNFhPLzNZclcwK0s5dz09In0.fP4JWis69HmaSg5jVHiK8nemiCu6VaMULSGGJyK4D4PkWq4iA1+nSHWMaHxepKwJ83sEiy9nMNZhv7BcktRNrA")
+1563981610713:jsonlite::fromJSON(url)
+1563981622075:address <- "Amager%20Boulevard%20128,%202300%20K%C3%B8benhavn%20S"
+1563981623004:url <- glue::glue("https://hvorlangterder.poi.viamap.net/v1/nearestpoi/?poitypes=daycare&fromaddress={address}&mot=foot&token=eyJkcGZ4IjogImh2b3JsYW5ndGVyZGVyIiwgInByaXZzIjogInIxWjByMEYwazZCdFdxUWNPVXlrQi95NlNVcEp2MlFiZ3lYZXRxNEhZNFhPLzNZclcwK0s5dz09In0.fP4JWis69HmaSg5jVHiK8nemiCu6VaMULSGGJyK4D4PkWq4iA1+nSHWMaHxepKwJ83sEiy9nMNZhv7BcktRNrA")
+1563981623641:jsonlite::fromJSON(url)
+1563981676629:url <- "http://hvorlangterder.dk/#Amager+Boulevard+124%2C+2300+K%F8benhavn+S"
+1563981679854:url
+1563981751322:library(rvest)
+1563981857019:html_data <- read_html(url)
+1563981859059:html_data
+1563983085253:address <- "Amager%20Boulevard%20128,%202300%20K%C3%B8benhavn%20S"
+1563983085558:url <- glue::glue("https://hvorlangterder.poi.viamap.net/v1/nearestpoi/?poitypes=daycare&fromaddress={address}&mot=foot&token=eyJkcGZ4IjogImh2b3JsYW5ndGVyZGVyIiwgInByaXZzIjogInIxWjByMEYwazZCdFdxUWNPVXlrQi95NlNVcEp2MlFiZ3lYZXRxNEhZNFhPLzNZclcwK0s5dz09In0.fP4JWis69HmaSg5jVHiK8nemiCu6VaMULSGGJyK4D4PkWq4iA1+nSHWMaHxepKwJ83sEiy9nMNZhv7BcktRNrA")
+1563983086189:jsonlite::fromJSON(url)
+1563994576647:address <- "Amager%20Boulevard%20128,%202300%20K%C3%B8benhavn%20S"
+1563994576900:token <- "eyJkcGZ4IjogImh2b3JsYW5ndGVyZGVyIiwgInByaXZzIjogInIxWjByMEYwazZCdFdxUWNPVXlrQi95NlNVcEp2MlFiZ3lYZXRxNEhZNFhPLzNZclcwK0s5dz09In0.fP4JWis69HmaSg5jVHiK8nemiCu6VaMULSGGJyK4D4PkWq4iA1+nSHWMaHxepKwJ83sEiy9nMNZhv7BcktRNrA"
+1563994577142:url <- glue::glue("https://hvorlangterder.poi.viamap.net/v1/nearestpoi/?poitypes=daycare&fromaddress={address}&mot=foot&token={token}")
+1563994577572:jsonlite::fromJSON(url)
+1563994872138:c("daycare", "doctor", "hospital", "junction", "metro", "school", "stop",
+1563994872166:"strain", "supermarket", "train", "library", "pharmacy",
+1563994872192:"coast", "forest", "lake",
+1563994872221:"airport", "sportshall", "publicbath", "soccerfield", "roadtrain")
+1563994919933:token <- "eyJkcGZ4IjogImh2b3JsYW5ndGVyZGVyIiwgInByaXZzIjogInIxWjByMEYwazZCdFdxUWNPVXlrQi95NlNVcEp2MlFiZ3lYZXRxNEhZNFhPLzNZclcwK0s5dz09In0.fP4JWis69HmaSg5jVHiK8nemiCu6VaMULSGGJyK4D4PkWq4iA1+nSHWMaHxepKwJ83sEiy9nMNZhv7BcktRNrA"
+1563994920218:address <- "Amager%20Boulevard%20128,%202300%20K%C3%B8benhavn%20S"
+1563994920540:type <- "supermarket"
+1563994932527:url <- glue::glue("https://hvorlangterder.poi.viamap.net/v1/nearestpoi/?poitypes={type}&fromaddress={address}&mot=foot&token={token}")
+1563994933366:jsonlite::fromJSON(url)
+1563994957603:type <- c("daycare,doctor")
+1563994959695:url <- glue::glue("https://hvorlangterder.poi.viamap.net/v1/nearestpoi/?poitypes={type}&fromaddress={address}&mot=foot&token={token}")
+1563994960716:jsonlite::fromJSON(url)
+1563994995267:types <- c("daycare", "doctor", "hospital", "junction", "metro", "school", "stop",
+1563994995291:"strain", "supermarket", "train", "library", "pharmacy",
+1563994995317:"coast", "forest", "lake",
+1563994995344:"airport", "sportshall", "publicbath", "soccerfield", "roadtrain") %>%
+1563994995369:str_c(collapse = ",")
+1563994997767:types
+1563995013216:url <- glue::glue("https://hvorlangterder.poi.viamap.net/v1/nearestpoi/?poitypes={types}&fromaddress={address}&mot=foot&token={token}")
+1563995024781:output <- jsonlite::fromJSON(url)
+1563995029097:View(output)
+1563995077015:out <- output[[1]]
+1563995318118:tibble(poi_id = out$poi_id,
+1563995318144:name = out$name,
+1563995318169:from_lat = out$fromlatlng[1],
+1563995318194:from_lng = out$fromlatlng[2],
+1563995318223:travel_seconds = out$travelseconds,
+1563995318248:mot = out$mot,
+1563995318278:route_polyline = out$routepolyline,
+1563995318304:euclidean_meters = out$euclideanmeters,
+1563995318330:to_lat = out$tolatlng,
+1563995318354:to_lng = out$tolatlng,
+1563995318377:routed_meters = out$routedmeters)
+1563995329815:tibble(poi_id = out$poi_id,
+1563995329845:name = out$name,
+1563995329870:from_lat = out$fromlatlng[1],
+1563995329896:from_lng = out$fromlatlng[2],
+1563995329921:travel_seconds = out$travelseconds,
+1563995329946:mot = out$mot,
+1563995329969:route_polyline = out$routepolyline,
+1563995329992:euclidean_meters = out$euclideanmeters,
+1563995330015:to_lat = out$tolatlng[1],
+1563995330038:to_lng = out$tolatlng[2],
+1563995330065:routed_meters = out$routedmeters)
+1563995349065:parser_output <- function(out){
+1563995349092:tibble(poi_id = out$poi_id,
+1563995349122:name = out$name,
+1563995349145:from_lat = out$fromlatlng[1],
+1563995349172:from_lng = out$fromlatlng[2],
+1563995349196:travel_seconds = out$travelseconds,
+1563995349215:mot = out$mot,
+1563995349238:route_polyline = out$routepolyline,
+1563995349259:euclidean_meters = out$euclideanmeters,
+1563995349281:to_lat = out$tolatlng[1],
+1563995349309:to_lng = out$tolatlng[2],
+1563995349331:routed_meters = out$routedmeters)
+1563995349360:}
+1563995397981:URLdecode(address)
+1563995414506:# Set the address
+1563995414531:address <- "Amager Boulevard 128, 2300 København S"
+1563995414767:address <- URLencode(address)
+1563995446155:library(tidyverse)
+1563995446182:library(rvest)
+1563995446226:# Custom function
+1563995446251:parser_output <- function(out){
+1563995446279:tibble(poi_id = out$poi_id,
+1563995446303:name = out$name,
+1563995446329:from_lat = out$fromlatlng[1],
+1563995446358:from_lng = out$fromlatlng[2],
+1563995446384:travel_seconds = out$travelseconds,
+1563995446414:mot = out$mot,
+1563995446439:route_polyline = out$routepolyline,
+1563995446464:euclidean_meters = out$euclideanmeters,
+1563995446488:to_lat = out$tolatlng[1],
+1563995446527:to_lng = out$tolatlng[2],
+1563995446576:routed_meters = out$routedmeters)
+1563995446606:}
+1563995446646:# Token
+1563995446671:token <- "eyJkcGZ4IjogImh2b3JsYW5ndGVyZGVyIiwgInByaXZzIjogInIxWjByMEYwazZCdFdxUWNPVXlrQi95NlNVcEp2MlFiZ3lYZXRxNEhZNFhPLzNZclcwK0s5dz09In0.fP4JWis69HmaSg5jVHiK8nemiCu6VaMULSGGJyK4D4PkWq4iA1+nSHWMaHxepKwJ83sEiy9nMNZhv7BcktRNrA"
+1563995446737:# Set the address
+1563995446760:address <- "Amager Boulevard 128, 2300 København S"
+1563995446780:address <- URLencode(address)
+1563995446806:# The types
+1563995446826:types <- c("daycare", "doctor", "hospital", "junction", "metro", "school", "stop",
+1563995446856:"strain", "supermarket", "train", "library", "pharmacy",
+1563995446878:"coast", "forest", "lake",
+1563995446897:"airport", "sportshall", "publicbath", "soccerfield", "roadtrain") %>%
+1563995446916:str_c(collapse = ",")
+1563995446945:# Build the url
+1563995446967:url <- glue::glue("https://hvorlangterder.poi.viamap.net/v1/nearestpoi/?poitypes={types}&fromaddress={address}&mot=foot&token={token}")
+1563995447042:# Get the data
+1563995447059:output <- jsonlite::fromJSON(url)
+1563995456956:# Get the data
+1563995456984:output_json <- jsonlite::fromJSON(url)
+1563995490440:# Custom function
+1563995490466:parse_output_json <- function(out){
+1563995490491:tibble(poi_id = out$poi_id,
+1563995490515:name = out$name,
+1563995490540:from_lat = out$fromlatlng[1],
+1563995490560:from_lng = out$fromlatlng[2],
+1563995490577:travel_seconds = out$travelseconds,
+1563995490601:mot = out$mot,
+1563995490623:route_polyline = out$routepolyline,
+1563995490646:euclidean_meters = out$euclideanmeters,
+1563995490669:to_lat = out$tolatlng[1],
+1563995490692:to_lng = out$tolatlng[2],
+1563995490715:routed_meters = out$routedmeters)
+1563995490740:}
+1563995492840:output_tibble <- map_dfr(output_json, parse_output_json)
+1563995496136:output_tibble
+1563995505675:View(output_tibble)
+1563995855049:decodePolyline <- function(enc_polyline, factor = 5) {
+1563995855078:factor <- 10^factor
+1563995855102:if(class(enc_polyline) != "character") stop("Wrong encoded string format")
+1563995855136:len <- nchar(enc_polyline)
+1563995855161:enc_polyline <- strsplit(enc_polyline, '')[[1]]
+1563995855193:idx <- 1
+1563995855219:res_idx <- 0
+1563995855243:lat = lon = 0
+1563995855267:changes <- list(NULL, NULL)
+1563995855291:pairs_points <- matrix(nrow = 0, ncol = 2)
+1563995855327:while(idx <= len) {
+1563995855381:for(u in c(1, 2)){
+1563995855395:shift = result = 0
+1563995855407:while(TRUE){
+1563995855420:byte <- as.integer(charToRaw(enc_polyline[idx])) - 63
+1563995855440:result <- bitops::bitOr(result,
+1563995855467:bitops::bitShiftL(bitops::bitAnd(byte, 0x1f), shift))
+1563995855487:idx <- idx + 1
+1563995855519:shift <- shift + 5
+1563995855540:if(byte < 0x20) break
+1563995855563:}
+1563995855583:changes[u] <- ifelse(bitops::bitAnd(result, 1),
+1563995855603:-(result - (bitops::bitShiftR(result, 1))),
+1563995855624:bitops::bitShiftR(result, 1))
+1563995855644:}
+1563995855664:lat <- lat + changes[[1]]
+1563995855684:lon <- lon + changes[[2]]
+1563995855718:res_idx <- res_idx + 1
+1563995855751:pairs_points <- rbind(pairs_points, c(lat, lon)/factor)
+1563995855777:}
+1563995855822:coords <- data.frame(pairs_points)
+1563995855841:names(coords) <- c('lat', 'lon')
+1563995855866:return(coords)
+1563995855938:}
+1563995866793:output_tibble
+1563995884545:output_tibble$route_polyline[1]
+1563995893338:decodePolyline(enc_polyline = output_tibble$route_polyline[1])
+1563995996653:library(tidyverse)
+1563995996693:library(rvest)
+1563995996732:# Token
+1563995996755:token <- "eyJkcGZ4IjogImh2b3JsYW5ndGVyZGVyIiwgInByaXZzIjogInIxWjByMEYwazZCdFdxUWNPVXlrQi95NlNVcEp2MlFiZ3lYZXRxNEhZNFhPLzNZclcwK0s5dz09In0.fP4JWis69HmaSg5jVHiK8nemiCu6VaMULSGGJyK4D4PkWq4iA1+nSHWMaHxepKwJ83sEiy9nMNZhv7BcktRNrA"
+1563995996792:# Set the address
+1563995996850:address <- "Amager Boulevard 128, 2300 København S"
+1563995996902:how_far_is_it <- function(address, token){
+1563995996937:# Custom functions
+1563995996960:parse_output_json <- function(out){
+1563995996978:tibble(poi_id = out$poi_id,
+1563995997000:name = out$name,
+1563995997032:from_lat = out$fromlatlng[1],
+1563995997056:from_lng = out$fromlatlng[2],
+1563995997077:travel_seconds = out$travelseconds,
+1563995997096:mot = out$mot,
+1563995997118:route_polyline = out$routepolyline,
+1563995997171:euclidean_meters = out$euclideanmeters,
+1563995997199:to_lat = out$tolatlng[1],
+1563995997219:to_lng = out$tolatlng[2],
+1563995997252:routed_meters = out$routedmeters)
+1563995997280:}
+1563995997307:# Urlencode the address
+1563995997327:address <- URLencode(address)
+1563995997356:# The types
+1563995997376:types <- c("daycare", "doctor", "hospital", "junction", "metro", "school", "stop",
+1563995997398:"strain", "supermarket", "train", "library", "pharmacy",
+1563995997420:"coast", "forest", "lake",
+1563995997440:"airport", "sportshall", "publicbath", "soccerfield", "roadtrain") %>%
+1563995997461:str_c(collapse = ",")
+1563995997489:# Build the url
+1563995997513:url <- glue::glue("https://hvorlangterder.poi.viamap.net/v1/nearestpoi/?poitypes={types}&fromaddress={address}&mot=foot&token={token}")
+1563995997541:# Get the data
+1563995997563:output_json <- jsonlite::fromJSON(url)
+1563995997591:# Parse the output
+1563995997612:output_tibble <- map_dfr(output_json, parse_output_json)
+1563995997646:# Return the data
+1563995997666:return(output_tibble)
+1563995997691:}
+1563996018894:how_far_df <- how_far_is_it(address, token)
+1563996029020:View(how_far_df)
+1563996084467:how_far_df
+1563996166850:how_far_is_it <- function(address, token){
+1563996166896:# Custom functions
+1563996166918:parse_output_json <- function(out){
+1563996166940:tibble(poi_id = out$poi_id,
+1563996166963:type = types_vector,
+1563996166986:name = out$name,
+1563996167010:from_lat = out$fromlatlng[1],
+1563996167033:from_lng = out$fromlatlng[2],
+1563996167056:travel_seconds = out$travelseconds,
+1563996167081:mot = out$mot,
+1563996167106:route_polyline = out$routepolyline,
+1563996167128:euclidean_meters = out$euclideanmeters,
+1563996167151:to_lat = out$tolatlng[1],
+1563996167175:to_lng = out$tolatlng[2],
+1563996167197:routed_meters = out$routedmeters)
+1563996167257:}
+1563996167302:# Urlencode the address
+1563996167320:address <- URLencode(address)
+1563996167349:# The types
+1563996167370:types_vector <- c("daycare", "doctor", "hospital", "junction", "metro", "school", "stop",
+1563996167390:"strain", "supermarket", "train", "library", "pharmacy",
+1563996167442:"coast", "forest", "lake",
+1563996167469:"airport", "sportshall", "publicbath", "soccerfield", "roadtrain")
+1563996167504:types <- types_vector %>% str_c(collapse = ",")
+1563996167578:# Build the url
+1563996167598:url <- glue::glue("https://hvorlangterder.poi.viamap.net/v1/nearestpoi/?poitypes={types}&fromaddress={address}&mot=foot&token={token}")
+1563996167630:# Get the data
+1563996167649:output_json <- jsonlite::fromJSON(url)
+1563996167679:# Parse the output
+1563996167699:output_tibble <- map_dfr(output_json, parse_output_json)
+1563996167738:# Return the data
+1563996167761:return(output_tibble)
+1563996167782:}
+1563996168581:how_far_df <- how_far_is_it(address, token)
+1563996177017:how_far_df
+1563996215228:how_far_is_it <- function(address, token){
+1563996215256:# Custom functions
+1563996215277:parse_output_json <- function(out){
+1563996215300:tibble(poi_id = out$poi_id,
+1563996215324:type = NA,
+1563996215351:name = out$name,
+1563996215376:from_lat = out$fromlatlng[1],
+1563996215401:from_lng = out$fromlatlng[2],
+1563996215426:travel_seconds = out$travelseconds,
+1563996215451:mot = out$mot,
+1563996215475:route_polyline = out$routepolyline,
+1563996215499:euclidean_meters = out$euclideanmeters,
+1563996215524:to_lat = out$tolatlng[1],
+1563996215548:to_lng = out$tolatlng[2],
+1563996215573:routed_meters = out$routedmeters)
+1563996215598:}
+1563996215631:# Urlencode the address
+1563996215653:address <- URLencode(address)
+1563996215687:# The types
+1563996215706:output_tibble <- c("daycare", "doctor", "hospital", "junction", "metro", "school", "stop",
+1563996215734:"strain", "supermarket", "train", "library", "pharmacy",
+1563996215757:"coast", "forest", "lake",
+1563996215775:"airport", "sportshall", "publicbath", "soccerfield", "roadtrain")
+1563996215803:types <- types_vector %>% str_c(collapse = ",")
+1563996215834:# Build the url
+1563996215855:url <- glue::glue("https://hvorlangterder.poi.viamap.net/v1/nearestpoi/?poitypes={types}&fromaddress={address}&mot=foot&token={token}")
+1563996215885:# Get the data
+1563996215914:output_json <- jsonlite::fromJSON(url)
+1563996215945:# Parse the output
+1563996215964:output_tibble <- map_dfr(output_json, parse_output_json)
+1563996215992:output_tibble$type <- output_tibble
+1563996216029:# Return the data
+1563996216050:return(output_tibble)
+1563996216072:}
+1563996216143:how_far_df <- how_far_is_it(address, token)
+1563996234215:how_far_is_it <- function(address, token){
+1563996234252:# Custom functions
+1563996234274:parse_output_json <- function(out){
+1563996234297:tibble(poi_id = out$poi_id,
+1563996234319:type = NA,
+1563996234343:name = out$name,
+1563996234364:from_lat = out$fromlatlng[1],
+1563996234387:from_lng = out$fromlatlng[2],
+1563996234412:travel_seconds = out$travelseconds,
+1563996234435:mot = out$mot,
+1563996234458:route_polyline = out$routepolyline,
+1563996234480:euclidean_meters = out$euclideanmeters,
+1563996234503:to_lat = out$tolatlng[1],
+1563996234527:to_lng = out$tolatlng[2],
+1563996234550:routed_meters = out$routedmeters)
+1563996234572:}
+1563996234604:# Urlencode the address
+1563996234627:address <- URLencode(address)
+1563996234690:# The types
+1563996234714:types_vector <- c("daycare", "doctor", "hospital", "junction", "metro", "school", "stop",
+1563996234739:"strain", "supermarket", "train", "library", "pharmacy",
+1563996234764:"coast", "forest", "lake",
+1563996234786:"airport", "sportshall", "publicbath", "soccerfield", "roadtrain")
+1563996234824:types <- types_vector %>% str_c(collapse = ",")
+1563996234885:# Build the url
+1563996234899:url <- glue::glue("https://hvorlangterder.poi.viamap.net/v1/nearestpoi/?poitypes={types}&fromaddress={address}&mot=foot&token={token}")
+1563996234914:# Get the data
+1563996234925:output_json <- jsonlite::fromJSON(url)
+1563996234944:# Parse the output
+1563996234955:output_tibble <- map_dfr(output_json, parse_output_json)
+1563996235027:output_tibble$type <- output_tibble
+1563996235062:# Return the data
+1563996235117:return(output_tibble)
+1563996235135:}
+1563996235808:how_far_df <- how_far_is_it(address, token)
+1563996237971:how_far_df
+1563996281167:how_far_is_it <- function(address, token){
+1563996281209:# Custom functions
+1563996281237:parse_output_json <- function(out){
+1563996281265:tibble(poi_id = out$poi_id,
+1563996281287:type = NA,
+1563996281308:name = out$name,
+1563996281334:from_lat = out$fromlatlng[1],
+1563996281366:from_lng = out$fromlatlng[2],
+1563996281390:travel_seconds = out$travelseconds,
+1563996281407:mot = out$mot,
+1563996281426:route_polyline = out$routepolyline,
+1563996281444:euclidean_meters = out$euclideanmeters,
+1563996281467:to_lat = out$tolatlng[1],
+1563996281521:to_lng = out$tolatlng[2],
+1563996281544:routed_meters = out$routedmeters)
+1563996281565:}
+1563996281598:# Urlencode the address
+1563996281625:address <- URLencode(address)
+1563996281667:# The types
+1563996281688:types_vector <- c("daycare", "doctor", "hospital", "junction", "metro", "school", "stop",
+1563996281738:"strain", "supermarket", "train", "library", "pharmacy",
+1563996281767:"coast", "forest", "lake",
+1563996281786:"airport", "sportshall", "publicbath", "soccerfield", "roadtrain")
+1563996281818:types <- types_vector %>% str_c(collapse = ",")
+1563996281860:# Build the url
+1563996281881:url <- glue::glue("https://hvorlangterder.poi.viamap.net/v1/nearestpoi/?poitypes={types}&fromaddress={address}&mot=foot&token={token}")
+1563996281915:# Get the data
+1563996281902:output_json <- jsonlite::fromJSON(url)
+1563996281949:# Parse the output
+1563996281970:output_tibble <- map_dfr(output_json, parse_output_json)
+1563996282003:output_tibble$type <- types_vector
+1563996282033:# Return the data
+1563996282055:return(output_tibble)
+1563996282078:}
+1563996282815:how_far_df <- how_far_is_it(address, token)
+1563996285044:how_far_df
+1563996325908:how_far_df %>%
+1563996325933:select(poi_id, type, travel_seconds, euclidean_meters, routed_meters)
+1563996335088:how_far_df %>%
+1563996335113:select(poi_id, travel_seconds, euclidean_meters, routed_meters)
+1563996374019:how_far_df %>%
+1563996374049:select(poi_id, travel_seconds, euclidean_meters, routed_meters) %>%
+1563996374074:gather(var, value, -poi_id)
+1563996417131:how_far_df %>%
+1563996417153:select(poi_id, travel_seconds, euclidean_meters, routed_meters) %>%
+1563996417174:gather(var, value, -poi_id) %>%
+1563996417219:combine(poi_id, var)
+1563996467005:how_far_df %>%
+1563996467028:select(poi_id, travel_seconds, euclidean_meters, routed_meters) %>%
+1563996467049:gather(var, value, -poi_id) %>%
+1563996467068:unite(feat, poi_id, var)
+1563996507786:how_far_df %>%
+1563996507812:select(type, travel_seconds, euclidean_meters, routed_meters) %>%
+1563996507832:gather(var, value, -type) %>%
+1563996507852:unite(feat, type, var)
+1563996523001:how_far_df %>%
+1563996523026:select(type, travel_seconds, euclidean_meters, routed_meters) %>%
+1563996523049:gather(var, value, -type) %>%
+1563996523072:unite(feat, type, var) %>%
+1563996523093:spread(feat, value)
+1563996568829:how_far_df
+1563996860905:usethis::create_package("how.far.is.it")
+1563996926586:usethis::create_package("how.far.is.it")
+1563997004976:usethis::use_build_ignore("dev_history.R")
+1563997269395:# Hide this file from R build
+1563997269425:usethis::use_build_ignore("dev_history.R")
+1563997270772:# Document functions and dependencies
+1563997270801:attachment::att_to_description()
+1563997279669:install.packages("attachment")
+1563997342911:devtools::install_github("ThinkR-open/attachment")
+1563997379335:# Document functions and dependencies
+1563997379363:attachment::att_to_description()
+1563997390535:# Check the package
+1563997390566:devtools:check()
+1563997394624:# Check the package
+1563997394650:devtools::check()
+1563997450616:# Create a vignette
+1563997450646:usethis::use_vignette("aa-exploration")
+1563997643661:library(how.far.is.it)
+1563997644021:address <- "Amager Boulevard 126, 2300 København S"
+1563997648007:library(how.far.is.it)
+1563997880077:token <- "eyJkcGZ4IjogImh2b3JsYW5ndGVyZGVyIiwgInByaXZzIjogInIxWjByMEYwazZCdFdxUWNPVXlrQi95NlNVcEp2MlFiZ3lYZXRxNEhZNFhPLzNZclcwK0s5dz09In0.fP4JWis69HmaSg5jVHiK8nemiCu6VaMULSGGJyK4D4PkWq4iA1+nSHWMaHxepKwJ83sEiy9nMNZhv7BcktRNrA"
+1563998015749:# Build package
+1563998015781:devtools::build()
+1563998045283:# Build package
+1563998045305:devtools::build()
+1563998067515:# Document the package
+1563998067543:devtools::document()
+1563998114311:how_far_is_it(address, token)
+1563998149146:# Document the package
+1563998149173:devtools::document()
+1563998151787:# Build package
+1563998151804:devtools::build()
+1563998173190:# Document the package
+1563998173217:devtools::document()
+1563998175712:# Build package
+1563998175733:devtools::build()
+1563998204371:# Document the package
+1563998204396:devtools::document()
+1563998323603:# Document the package
+1563998324085:devtools::document()
+1563998582192:# Document the package
+1563998582215:devtools::document()
+1563998585823:# Install package
+1563998585842:devtools::install()
+1563998595342:# Document functions and dependencies
+1563998595365:attachment::att_to_description()
+1563998600913:# Check the package
+1563998600937:devtools::check()
+1563998694399:# Document functions and dependencies
+1563998694424:attachment::att_to_description()
+1563998701399:# Check the package
+1563998701427:devtools::check()
+1563998782371:address <- "Amager Boulevard 126, 2300 København S"
+1563998782931:token <- "eyJkcGZ4IjogImh2b3JsYW5ndGVyZGVyIiwgInByaXZzIjogInIxWjByMEYwazZCdFdxUWNPVXlrQi95NlNVcEp2MlFiZ3lYZXRxNEhZNFhPLzNZclcwK0s5dz09In0.fP4JWis69HmaSg5jVHiK8nemiCu6VaMULSGGJyK4D4PkWq4iA1+nSHWMaHxepKwJ83sEiy9nMNZhv7BcktRNrA"
+1563998784421:how_far_is_it(address, token)
+1563998857687:library(how.far.is.it)
+1563998858081:how_far_df <- how_far_is_it(address, token)
+1563998903946:dplyr::glimpse(how_far_df)
+1563999182482:#'
+1563999182510:#' @return a tibble
+1563999182534:#' @export
+1563999182559:#'
+1563999182583:#' @examples
+1563999182610:#'
+1563999182635:#' #' address <- "Amager Boulevard 126, 2300 København S"
+1563999182661:#' token <- "eyJkcGZ4IjogImh2b3JsYW5ndGVyZGVyIiwgInByaXZzIjogInIxWjByMEYwazZCdFdxUWNPVXlrQi95NlNVcEp2MlFiZ3lYZXRxNEhZNFhPLzNZclcwK0s5dz09In0.fP4JWis69HmaSg5jVHiK8nemiCu6VaMULSGGJyK4D4PkWq4iA1+nSHWMaHxepKwJ83sEiy9nMNZhv7BcktRNrA"
+1563999182687:#'
+1563999182714:#' how_far_is_it(address, token)
+1563999182737:create_distance_features <- function(how_far_df){
+1563999182769:how_far_features <- how_far_df %>%
+1563999182790:select(type, travel_seconds, euclidean_meters, routed_meters) %>%
+1563999182811:gather(var, value, -type) %>%
+1563999182833:unite(feat, type, var) %>%
+1563999182857:spread(feat, value)
+1563999182880:}
+1563999247600:# Document functions and dependencies
+1563999247625:attachment::att_to_description()
+1563999253229:# Check the package
+1563999253259:devtools::check()
+1563999308274:# Check the package
+1563999308302:devtools::check()
+1563999547807:how_far_features <- create_distance_features(how_far_df)
+1563999588677:# Document the package
+1563999588702:devtools::document()
+1563999592852:# Install package
+1563999592880:devtools::install()
+1563999604278:how_far_features <- create_distance_features(how_far_df)
+1563999625317:library(how.far.is.it)
+1563999628182:how_far_features <- create_distance_features(how_far_df)
+1563999658337:library(how.far.is.it)
+1563999660569:library(how.far.is.it)
+1563999661164:how_far_features <- create_distance_features(how_far_df)
+1563999697659:# Document the package
+1563999697684:devtools::document()
+1563999701250:# Install package
+1563999701273:devtools::install()
+1563999756803:library(how.far.is.it)
+1563999757161:dplyr::glimpse(how_far_features)
+1563999781225:knitr::opts_chunk$set(
+1563999781339:collapse = TRUE,
+1563999781399:comment = "#>"
+1563999781555:)
+1563999781888:library(how.far.is.it)
+1563999782436:address <- "Amager Boulevard 126, 2300 København S"
+1563999782684:token <- "eyJkcGZ4IjogImh2b3JsYW5ndGVyZGVyIiwgInByaXZzIjogInIxWjByMEYwazZCdFdxUWNPVXlrQi95NlNVcEp2MlFiZ3lYZXRxNEhZNFhPLzNZclcwK0s5dz09In0.fP4JWis69HmaSg5jVHiK8nemiCu6VaMULSGGJyK4D4PkWq4iA1+nSHWMaHxepKwJ83sEiy9nMNZhv7BcktRNrA"
+1563999782919:how_far_df <- how_far_is_it(address, token)
+1563999783917:dplyr::glimpse(how_far_df)
+1563999785193:how_far_features <- create_distance_features(how_far_df)
+1563999785551:dplyr::glimpse(how_far_features)
+1563999868738:# Document functions and dependencies
+1563999868769:attachment::att_to_description()
+1563999896375:# Document functions and dependencies
+1563999896402:attachment::att_to_description()
+1563999938884:# Check the package
+1563999938912:devtools::check()
+1564000156484:install.packages("exampletestr")
+1564000365059:# Publish
+1564000365088:chameleon::build_pkgdown()
+1564000369924:install.packages("chameleon")
+1564000408986:remotes::install_github("ThinkR-open/chameleon")
+1564000426201:# Publish
+1564000426226:chameleon::build_pkgdown()
+1564000630463:# Document functions and dependencies
+1564000630489:attachment::att_to_description()
+1564000634649:# Check the package
+1564000634669:devtools::check()
+1564000661000:# Install package
+1564000661023:devtools::install()
+1564000683852:# Publish
+1564000683894:chameleon::build_pkgdown()
+1564000702650:chameleon::build_book()
+1564000709112:chameleon::build_book()
+1564000767301:chameleon::build_book()

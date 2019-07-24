@@ -1,0 +1,72 @@
+---
+title: "How far is it use case"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{aa-exploration}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(how.far.is.it)
+```
+
+## Data needed
+
+We need an address and a token in order to call the API.
+
+The address we get by simply setting it like this:
+
+```{r set_address}
+address <- "Amager Boulevard 126, 2300 København S"
+```
+
+The token is a bit more tricky. You need to go to [http://hvorlangterder.dk](http://hvorlangterder.dk) using Chrome or Firefox, right click `inspect` and see the `XHR` calls under `Network`. Here you should see some API calls being made. They look like this:
+
+```
+https://hvorlangterder.poi.viamap.net/v1/nearestpoi/?poitypes=coast&fromaddress=Amager%20Boulevard%20124,%202300%20K%C3%B8benhavn%20S&mot=foot&token=eyJkcGZ4IjogImh2b3JsYW5ndGVyZGVyIiwgInByaXZzIjogInIxWjByMEYwazZCdFdxUWNPVXlrQi95NlNVcEp2MlFiZ3lYZXRxNEhZNFhPLzNZclcwK0s5dz09In0.fP4JWis69HmaSg5jVHiK8nemiCu6VaMULSGGJyK4D4PkWq4iA1+nSHWMaHxepKwJ83sEiy9nMNZhv7BcktRNrA
+```
+
+Grap the token part and set it as token
+
+```{r set_token}
+token <- "eyJkcGZ4IjogImh2b3JsYW5ndGVyZGVyIiwgInByaXZzIjogInIxWjByMEYwazZCdFdxUWNPVXlrQi95NlNVcEp2MlFiZ3lYZXRxNEhZNFhPLzNZclcwK0s5dz09In0.fP4JWis69HmaSg5jVHiK8nemiCu6VaMULSGGJyK4D4PkWq4iA1+nSHWMaHxepKwJ83sEiy9nMNZhv7BcktRNrA"
+```
+
+## Get the distance
+
+Now you are ready to get the distance.
+
+```{r get_distance}
+how_far_df <- how_far_is_it(address, token)
+```
+
+Let us have a look at the data:
+
+```{r look_at_data}
+dplyr::glimpse(how_far_df)
+```
+
+As you can see we now have a data set detailing distances to different points of interest.
+
+## Create distance features
+We can then turn this tibble into a list of distance features for the address like this.
+
+```{r create_features}
+how_far_features <- create_distance_features(how_far_df)
+```
+
+Let us have a look at the newly created features:
+
+```{r look_at_features}
+dplyr::glimpse(how_far_features)
+```
+
+A very nice data set that now contains 60 distance features for the given address. 
